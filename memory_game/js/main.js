@@ -32,15 +32,12 @@ function checkForMatch() {
     alert("You found a match!");
   } else {
     alert("Sorry, try again.");
-    console.log(cardsInPlay)
   }
 }
 
 function flipCard() {
   var cardId = this.getAttribute('data-id')
-  // console.log('User flipped ' + cards[cardId].rank);
   cardsInPlay.push(cards[cardId].rank);
-  // console.log('card image: ' + cards[cardId].cardImage)
   this.setAttribute('src', cards[cardId].cardImage)
   checkForMatch();
 }
